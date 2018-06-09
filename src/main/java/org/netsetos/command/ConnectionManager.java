@@ -85,6 +85,8 @@ public class ConnectionManager  extends HttpServlet {
 			     rsemail = stmte.executeQuery(queryforemail);   
 			    
 	if (email == null) {  
+		 findTopicList(request,response);
+		response.sendRedirect("org/netsetos/java/TOCFromDataBase.jsp");
 		System.out.println("email is  rs "+email);
 			    if (rs.next()) {
 			    	System.out.println("email is  rs "+email);
